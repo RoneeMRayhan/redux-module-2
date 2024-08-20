@@ -101,3 +101,7 @@ export default {
 ```bash
 pn dev
 ```
+
+# End of Basic Structure
+## 24-3 Initial Project Setup
+### Basic Structure
