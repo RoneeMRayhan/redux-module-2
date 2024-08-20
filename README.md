@@ -18,11 +18,11 @@ export default tseslint.config({
   languageOptions: {
     // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 - Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
@@ -31,11 +31,11 @@ export default tseslint.config({
 
 ```js
 // eslint.config.js
-import react from 'eslint-plugin-react'
+import react from "eslint-plugin-react";
 
 export default tseslint.config({
   // Set the react version
-  settings: { react: { version: '18.3' } },
+  settings: { react: { version: "18.3" } },
   plugins: {
     // Add the react plugin
     react,
@@ -44,8 +44,60 @@ export default tseslint.config({
     // other rules...
     // Enable its recommended rules
     ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
+    ...react.configs["jsx-runtime"].rules,
   },
-})
+});
 ```
+
 # redux-module-2
+
+# Create React Typescript Project using Vite
+
+```bash
+pn create vite
+```
+
+- [Redux Official Documentation](https://redux-toolkit.js.org/tutorials/quick-start)
+
+```bash
+npm install @reduxjs/toolkit react-redux
+pn install @reduxjs/toolkit react-redux
+pn i @reduxjs/toolkit react-redux
+```
+
+## For using Tailwind
+
+### **TailwindCSS Official Documentation**
+
+[TailwindCSS](https://tailwindcss.com/docs/guides/vite)
+
+```bash
+pn i -D postcss autoprefixer tailwindcss
+npx tailwindcss init -p
+pn tailwindcss init -p
+```
+
+### tailwind.config.js
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+### index.css
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+```bash
+pn dev
+```
