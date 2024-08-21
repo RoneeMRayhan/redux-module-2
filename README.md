@@ -103,5 +103,14 @@ pn dev
 ```
 
 # End of Basic Structure
+
 ## 24-3 Initial Project Setup
+
 ### Basic Structure
+
+### [Middleware](https://redux-toolkit.js.org/api/getDefaultMiddleware#included-default-middleware)
+
+```bash
+pn i redux-logger
+pn i --save-dev @types/redux-logger
+```
